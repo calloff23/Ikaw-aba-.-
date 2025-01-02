@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    flex-direction: column;
+}
+
+#page1 {
+    background: linear-gradient(90deg, green, white);
+}
+
+#page2 {
+    background: linear-gradient(90deg, white, green);
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: slide-in 3s infinite;
+}
+
+.emoji {
+    font-size: 100px;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    animation: pulse 2s infinite;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+.animation-container {
+    position: relative;
+}
+
+.hand-with-rose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: handMove 5s infinite;
+}
+
+.hand {
+    width: 60px;
+    height: 80px;
+    background-color: #f0d9b5;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: handAnimation 5s ease-in-out infinite;
+}
+
+.rose {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    left: 25px;
+    animation: roseAnimation 5s infinite;
+}
+
+.text span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6347;
+    position: absolute;
+    bottom: 20px;
+    animation: textMove 5s infinite;
+}
+
+.footer-text {
+    position: absolute;
+    bottom: 20px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.top-left {
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    font-size: 12px;
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes handMove {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: -10px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes handAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes roseAnimation {
+    0% {
+        top: -40px;
+    }
+    50% {
+        top: 0;
+    }
+    100% {
+        top: -40px;
+    }
+}
+
+@keyframes textMove {
+    0% {
+        bottom: 20px;
+    }
+    50% {
+        bottom: 40px;
+    }
+    100% {
+        bottom: 20px;
+    }
+}
